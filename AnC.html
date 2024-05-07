@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      width: 100vw;
+      min-height: 100vh;
+      background: linear-gradient(to right top, #14002b, rgb(26, 0, 61), #1d0143, #30026f, #7300f3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page {
+      width: 95%;
+      min-height: 90vh;
+      background: linear-gradient(to bottom, #070514, #151132, #15112b, #1e1b37);
+      display: flex;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      border-radius: 20px;
+    }
+
+    .container1 {
+      width: 30vw;
+      min-height: 100%;
+      background-color: #03030A;
+      margin: 0;
+      border-top-left-radius: 18px;
+      border-bottom-left-radius: 18px;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .container2 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container2 .sub_container1 {
+      width: 96%;
+      height: 28vh;
+      background: linear-gradient(to right top, #6600c4, #5403a0, rgb(38, 5, 84), rgb(38, 3, 88), #250157, #3e0a86, #5e16c3);
+      position: relative;
+      top: 16px;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 3;
+    }
+
+    .container2 .sub_container2 {
+      display: flex;
+      width: 96%;
+      gap: 25px;
+      position: relative;
+      top: 16px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .container2 .sub_container2 .box {
+      width: 32%;
+      height: 40vh;
+      background-color: black;
+      border-radius: 14px;
+      box-shadow: 5px 5px 10px #5a01ad;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media screen and (max-width:1300px) {
+      .container2 .sub_container2 .box {
+        height: auto;
+      }
+    }
+
+    .container2 .sub_container2 .box1.active {
+      transform: scale(1.2);
+      border: 3px solid#5a01ad;
+      z-index: 100;
+    }
+
+    .container2 .sub_container2 .box2.active {
+      transform: scale(1.2);
+      border: 3px solid#5a01ad;
+      z-index: 100;
+    }
+
+    .container2 .sub_container2 .box3.active {
+      transform: scale(1.2);
+      border: 3px solid#5a01ad;
+      z-index: 100;
+    }
+
+    .container2 .sub_container3 {
+      width: 96%;
+      height: auto;
+      margin-top: 40px;
+      background-color: black;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      box-shadow: 5px 5px 10px #6700c8;
+      padding-bottom: 20px;
+    }
+
+    .target {
+      color: rgb(255, 255, 255);
+      height: 10vh;
+      width: 100%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 22px;
+      position: relative;
+      top: 40px;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+
+    }
+
+    .target h2 {
+      margin: 0;
+    }
+
+    .target img {
+      width: 70px;
+      height: 70px;
+    }
+
+    .f3 {
+      list-style-type: none;
+      /* Removes default list marker */
+    }
+
+    .f3 li {
+      color: rgb(185, 185, 185);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.3em;
+      cursor: pointer;
+      margin-bottom: 40px;
+      padding-left: 20px;
+      /* Add some padding to create space for the image */
+      position: relative;
+      /* Position the image relative to the list item */
+    }
+
+    .image_type1:before {
+      content: "";
+      /* Empty content */
+      display: block;
+      /* Make it a block element */
+      width: 18px;
+      /* Adjust width of the image */
+      height: 18px;
+      /* Adjust height of the image */
+      background-image: url('pngaaa.com-4851388.png');
+      /* Replace 'path/to/your/image.png' with the path to your image */
+      background-size: cover;
+      /* Adjust image size to fit */
+      background-repeat: no-repeat;
+      /* Prevent image from repeating */
+      position: absolute;
+      /* Position absolutely relative to list item */
+      left: 0;
+      /* Position image to the left of the list item */
+      top: 50%;
+      /* Center image vertically */
+      transform: translateY(-50%);
+      /* Center image vertically */
+    }
+
+    .image_type2:before {
+      content: "";
+      /* Empty content */
+      display: block;
+      /* Make it a block element */
+      width: 18px;
+      /* Adjust width of the image */
+      height: 18px;
+      /* Adjust height of the image */
+      background-image: url('pngfind.com-line-graph-png-2074672.png');
+      /* Replace 'path/to/your/image.png' with the path to your image */
+      background-size: cover;
+      /* Adjust image size to fit */
+      background-repeat: no-repeat;
+      /* Prevent image from repeating */
+      position: absolute;
+      /* Position absolutely relative to list item */
+      left: 0;
+      /* Position image to the left of the list item */
+      top: 50%;
+      /* Center image vertically */
+      transform: translateY(-50%);
+      /* Center image vertically */
+    }
+
+    .image_type3:before {
+      content: "";
+      /* Empty content */
+      display: block;
+      /* Make it a block element */
+      width: 18px;
+      /* Adjust width of the image */
+      height: 18px;
+      /* Adjust height of the image */
+      background-image: url('pngaaa.com-6982848.png');
+      /* Replace 'path/to/your/image.png' with the path to your image */
+      background-size: cover;
+      /* Adjust image size to fit */
+      background-repeat: no-repeat;
+      /* Prevent image from repeating */
+      position: absolute;
+      /* Position absolutely relative to list item */
+      left: 0;
+      /* Position image to the left of the list item */
+      top: 50%;
+      /* Center image vertically */
+      transform: translateY(-50%);
+      /* Center image vertically */
+    }
+
+    .image_type4:before {
+      content: "";
+      /* Empty content */
+      display: block;
+      /* Make it a block element */
+      width: 18px;
+      /* Adjust width of the image */
+      height: 18px;
+      /* Adjust height of the image */
+      background-image: url('pngaaa.com-2127823.png');
+      /* Replace 'path/to/your/image.png' with the path to your image */
+      background-size: cover;
+      /* Adjust image size to fit */
+      background-repeat: no-repeat;
+      /* Prevent image from repeating */
+      position: absolute;
+      /* Position absolutely relative to list item */
+      left: 0;
+      /* Position image to the left of the list item */
+      top: 50%;
+      /* Center image vertically */
+      transform: translateY(-50%);
+      /* Center image vertically */
+    }
+
+    .image_type5:before {
+      content: "";
+      /* Empty content */
+      display: block;
+      /* Make it a block element */
+      width: 26px;
+      /* Adjust width of the image */
+      height: 26px;
+      /* Adjust height of the image */
+      background-image: url('pngaaa.com-1343787.png');
+      /* Replace 'path/to/your/image.png' with the path to your image */
+      background-size: cover;
+      /* Adjust image size to fit */
+      background-repeat: no-repeat;
+      /* Prevent image from repeating */
+      position: absolute;
+      /* Position absolutely relative to list item */
+      left: 0;
+      /* Position image to the left of the list item */
+      top: 50%;
+      /* Center image vertically */
+      transform: translateY(-50%);
+      /* Center image vertically */
+    }
+
+    .image_type6:before {
+      content: "";
+      /* Empty content */
+      display: block;
+      /* Make it a block element */
+      width: 18px;
+      /* Adjust width of the image */
+      height: 18px;
+      /* Adjust height of the image */
+      background-image: url('pngaaa.com-4514377 (1).png');
+      /* Replace 'path/to/your/image.png' with the path to your image */
+      background-size: cover;
+      /* Adjust image size to fit */
+      background-repeat: no-repeat;
+      /* Prevent image from repeating */
+      position: absolute;
+      /* Position absolutely relative to list item */
+      left: 0;
+      /* Position image to the left of the list item */
+      top: 50%;
+      /* Center image vertically */
+      transform: translateY(-50%);
+      /* Center image vertically */
+    }
+
+    .image_type7:before {
+      content: "";
+      /* Empty content */
+      display: block;
+      /* Make it a block element */
+      width: 16px;
+      /* Adjust width of the image */
+      height: 18px;
+      /* Adjust height of the image */
+      background-image: url('pngaaa.com-3918756.png');
+      /* Replace 'path/to/your/image.png' with the path to your image */
+      background-size: cover;
+      /* Adjust image size to fit */
+      background-repeat: no-repeat;
+      /* Prevent image from repeating */
+      position: absolute;
+      /* Position absolutely relative to list item */
+      left: 0;
+      /* Position image to the left of the list item */
+      top: 50%;
+      /* Center image vertically */
+      transform: translateY(-50%);
+      /* Center image vertically */
+    }
+
+    .c {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .help {
+      width: 18vw;
+      margin-top: 20px;
+      background: linear-gradient(to right top, #5a01ad, rgb(56, 8, 122), #1d0143, #30026f, #4902ab);
+      border-radius: 10px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: white;
+      padding: 16px;
+      padding-bottom: 20px;
+    }
+
+    .help h4 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .help p {
+      font-size: 1em;
+      margin: 5px;
+      margin-bottom: 10px;
+      color: rgb(178, 175, 175);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .help .z {
+      width: 18vw;
+      display: flex;
+      justify-content: center;
+    }
+
+    .help button {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 600;
+      font-size: 1em;
+      color: rgb(228, 228, 228);
+      border-radius: 3vh;
+      background-color: #8519ff;
+      border: none;
+      width: 18vw;
+      height: 5vh;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      cursor: pointer;
+    }
+
+    .help button:hover {
+      background-color: #4f0198
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(185, 185, 185);
+    }
+
+    .top {
+      width: 96%;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+    }
+
+    .top .txt {
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Montserrat;
+      font-size: 0.9em;
+    }
+
+    .bottom {
+      width: 100%;
+      height: 72px;
+      background: rgba(0, 0, 0, 0.5);
+      border-bottom-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+      position: relative;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .bottom .left {
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      width: auto;
+      height: auto;
+      margin: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .bottom .left .profile {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      object-fit: cover;
+      object-position: top;
+      border: 2px solid black;
+      opacity: 1;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+
+    .bottom .left .profile:hover {
+
+      transform: scale(2.0);
+    }
+
+    .bottom .left .text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bottom .right {
+      margin-right: 4vw;
+    }
+
+    .bottom .right .b {
+      width: 7vw;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: white;
+      height: 24px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bottom .right .b1 {
+      width: 9vw;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #8519ff;
+      cursor: pointer;
+    }
+
+    /*in this case to get box completely over everything else the z-index of element containing the box must be greater than any other element*/
+    .bottom .right .b1 img {
+      width: 14px;
+      height: 16px;
+    }
+
+    .search {
+      height: 40px;
+      width: 20vw;
+      color: white;
+      display: flex;
+      align-items: center;
+      background-color: black;
+      opacity: 0.6;
+      border: 0.3px solid rgb(0, 0, 0);
+      border-radius: 8px;
+
+    }
+
+    .search img {
+      width: 30px;
+      height: 30px;
+      padding-left: 20px;
+    }
+
+    .search input {
+      background: transparent;
+      font-size: 20px;
+      border: none;
+      height: 40px;
+      width: 70%;
+      color: white;
+      display: flex;
+      align-items: center;
+      z-index: 5;
+      padding-left: 20px;
+    }
+
+    .right {
+      width: 25vw;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .right .icons .icon1 {
+      width: 18px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    .right .icons .icon1.active {
+      animation: vibrate 0.1s ease-in-out 4 alternate-reverse;
+    }
+
+    @keyframes vibrate {
+      0% {
+        transform: translate(0);
+      }
+
+      25% {
+        transform: translate(-4px);
+      }
+
+      50% {
+        transform: translate(4px, );
+      }
+
+      75% {
+        transform: translate(-4px, );
+      }
+
+      100% {
+        transform: translate(4px, );
+      }
+    }
+
+    .right .icons .notification {
+      position: absolute;
+      z-index: 9999;
+      transform: translateX(-100%);
+    }
+
+    .notification-box {
+      display: none;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .right .icons .notification.active .notification-box {
+      width: 30vw;
+      /* Adjust width as needed */
+      background: linear-gradient(to right top, #5a01ad, rgb(56, 8, 122), #1d0143, #30026f, #4902ab);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .notification-box h2 {
+      font-family: Montserrat;
+      font-size: 32px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .notification-list {
+      list-style: disc;
+      padding: 0;
+    }
+
+    .notification-list li {
+      font-family: Montserrat;
+      margin-bottom: 14px;
+      padding: 8px;
+      color: white;
+      background-color: rgb(0, 0, 0, 0.3);
+      border: 1px solid #000000;
+      border-radius: 4px;
+    }
+
+    .sub_container2 .btn .container {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      width: 34px;
+      height: 18px;
+      background-color: rgb(84, 84, 84);
+      opacity: 0.8;
+      border-radius: 30px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .sub_container2 .btn .button {
+      width: 14px;
+      height: 14px;
+      margin: 2px;
+      cursor: pointer;
+      background-color: rgb(0, 0, 0);
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .sub_container2 .btn .button.active {
+      transform: translateX(14px);
+      background-color: rgb(255, 255, 255);
+    }
+
+    .sub_container2 .btn .container.active {
+      background-color: rgb(137, 20, 247);
+    }
+
+    .sub_container2 .setting_option {
+      width: 90%;
+      height: 15%;
+      color: rgb(206, 206, 206);
+      display: flex;
+      align-items: center;
+      font-family: Montserrat;
+      font-size: 13px;
+      gap: 10px;
+      margin-left: 1vw;
+    }
+
+    .sub_container2 .setting {
+      color: white;
+      font-family: Montserrat;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      gap: 1vw;
+      margin-left: 1vw;
+    }
+
+    .sub_container2 .setting img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .sub_container2 .box3 .message {
+      display: flex;
+    }
+
+    .sub_container2 .box3 .m1 {
+      width: 15vw;
+      height: auto;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 1vw;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    .sub_container2 .box3 .m1 .profile {
+      width: 36px;
+      height: 36px;
+      position: relative;
+      object-fit: cover;
+      object-position: top;
+      border: 3px solid #8519ff;
+      opacity: 1;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+
+    .sub_container2 .box3 .m1 .text {
+      font-family: Montserrat;
+      color: rgb(199, 199, 199);
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sub_container2 .box3 .message .reply {
+      color: #8519ff;
+      font-family: Montserrat;
+      position: relative;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    @media screen and (max-width:1200px) {
+      .sub_container2 .box3 .message .reply {
+        display: none;
+      }
+
+      .sub_container2 .box3 .m1 {
+        margin-bottom: 20px;
+        width: 17vw
+      }
+    }
+
+    .sub_container2 .box3 .title {
+      color: white;
+      width: 15vw;
+      font-family: Montserrat;
+      display: flex;
+      align-items: center;
+      gap: 1vw;
+      margin-left: 2vw;
+      margin-bottom: 0;
+    }
+
+    .sub_container2 .box3 .title img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .sub_container2 .box2 .profile {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-family: Montserrat;
+      gap: 1vw;
+      margin-left: 2vw;
+      margin-bottom: 10px;
+    }
+
+    .sub_container2 .box2 .profile img {
+      width: 16px;
+      height: 20px;
+    }
+
+    .sub_container2 .box2 .info {
+      color: rgb(192, 190, 190);
+      width: 90%;
+      font-family: Montserrat;
+      font-size: 14px;
+      margin-left: 5%;
+      margin: top 0;
+    }
+
+    .sub_container2 .box2 .line {
+      width: 90%;
+      height: 1px;
+      margin-left: 5%;
+      background-color: rgba(241, 239, 239, 0.5)
+    }
+
+    .sub_container2 .box2 .in1 {
+      width: 90%;
+      height: auto;
+      margin-left: 5%;
+      font-family: Montserrat;
+      color: rgb(187, 187, 187);
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    .sub_container3 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .sub_container3 .project {
+      height: 60px;
+      font-family: MOntserrat;
+      color: rgb(228, 228, 228);
+      display: flex;
+      align-items: center;
+      padding-left: 5%;
+      gap: 16px;
+    }
+
+    .sub_container3 .project img {
+      width: 16px;
+      height: 20px;
+    }
+
+    .sub_container3 .projects {
+      display: flex;
+      gap: 2vw;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sub_container3 .projects .box {
+      width: auto;
+      height: auto;
+      background-color: #1e1b37;
+      border-radius: 8px;
+      padding-top: 6px;
+      box-sizing: border-box;
+    }
+
+    @media screen and (max-width:1300px) {
+      .sub_container3 .projects .box {
+        width: auto;
+      }
+
+      .sub_container3 {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    .sub_container3 .projects .box ._top {
+      height: 40px;
+      padding: 5%;
+      display: flex;
+      color: rgb(200, 200, 200);
+      gap: 10px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .sub_container3 .projects .box ._top img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .sub_container3 .projects .box ._top ._title {
+      margin: 0;
+      padding-bottom: 0;
+      font-family: Montserrat;
+    }
+
+    .sub_container3 .projects .box ._top ._title h4 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .sub_container3 .projects .box ._top ._title p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .sub_container3 .projects .box .body {
+      width: 100%;
+    }
+
+    .sub_container3 .projects .box .body p {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 14px;
+      font-family: Montserrat;
+      color: rgb(180, 179, 179);
+    }
+
+    .sub_container3 .projects .box4 {
+      display: flex;
+      padding-top: 54px;
+      align-items: center;
+      color: rgb(180, 179, 179);
+      flex-direction: column;
+      font-family: MOntserrat;
+      font-size: 16px;
+    }
+
+    .sub_container3 .projects .box4 {
+      display: none;
+    }
+
+    .sub_container3 .projects .box4 div {
+      height: 40px;
+    }
+
+    .sub_container3 .projects .box4 p {
+      padding: 6px;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="container1">
+      <div class="target">
+        <img src="controller.png" alt="">
+        <h2>MySpace</h2>
+      </div>
+      <ul class="f3">
+        <li class="image_type1" style="margin-top: 60px;"><a href="https://dashthis.com/website-dashboard/"
+            target="_blank">&nbsp&nbsp&nbsp&nbspDashboard</a></li>
+        <li class="image_type2"><a href="https://www.forbes.com/advisor/in/business/software/website-statistics/"
+            target="_blank">&nbsp&nbsp&nbsp&nbspStatistics</a></li>
+        <li class="image_type3"><a href="https://en.wikipedia.org/wiki/Document"
+            target="_blank">&nbsp&nbsp&nbsp&nbspDocuments</a></li>
+        <li class="image_type4" id="a_profile">&nbsp&nbsp&nbsp&nbspProfile</li>
+        <li class="image_type5" id="a_message">&nbsp&nbsp&nbsp&nbspMessages</li>
+        <li class="image_type6" id="a_setting">&nbsp&nbsp&nbsp&nbspSettings</li>
+        <li class="image_type7" style="margin-bottom:0">&nbsp&nbsp&nbsp&nbspLog Out</li>
+      </ul>
+      <div class="c">
+        <div class="help">
+          <img src="WhatsApp Image 2024-05-05 at 2.10.37 AM.jpeg" style="width:36px ;height:36px; border-radius:50%"
+            alt="">
+          <h4>Need Help ?</h4>
+          <p>Please check your docs</p>
+          <div class="z"><button id="button">Check Now</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="sub_container1">
+        <div class="top">
+          <div class="txt">
+            <p>Pages&nbsp</p>
+            <p style="font-size:1.2em;font-weight:500">/&nbspDashboard</p>
+          </div>
+          <div class="right">
+            <div class="search">
+              <img src="pngegg.png" alt="">
+              <input type="text" name="username" placeholder="Search">
+            </div>
+            <div class="icons">
+              <img src="pngaaa.com-7483510.png" alt="" class="icon1" id="icon1">
+              <div class="notification" id="notification">
+                <div class="notification-box">
+                  <h2>Notification</h2>
+                  <ul class="notification-list">
+                    <li>New message from John</li>
+                    <li>Reminder: Meeting at 3 PM</li>
+                    <li>Payment received</li>
+                    <li>Upcoming event: Company picnic on Saturday</li>
+                    <li>Task assigned: Review project proposal</li>
+                    <li>Server maintenance scheduled for tomorrow</li>
+                    <li>System update available. Restart your computer</li>
+                    <li>Weather alert: Heavy rain expected tonight</li>
+                    <li>Document approval requested</li>
+                    <li>Website downtime notification</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="left">
+            <img src="pexels-moh-adbelghaffar-771742 (1).jpg" alt="" class="profile">
+            <div class="text">
+              <p style="margin:0">Humayun Ahmad</p>
+              <p style="margin:0">humayuna23@iitk.ac.in</p>
+            </div>
+          </div>
+          <div class="right">
+            <div class="b b1" id="overview">
+              <img src="kindpng_3992479.png" alt="">
+              <p>Overview</p>
+              <div class="box" id="overview_box"></div>
+            </div>
+            <div class="b b2"><a href="https://iitkms.in/" style="color:white">Teams</a></div>
+            <div class="b b3"><a href="https://iitkms.in/cars.html" style="color:white">Projects</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="sub_container2">
+        <div class="box box1" id="setting_id">
+          <div class="setting">
+            <img src="pngaaa.com-4514377.png" alt="">
+            <h3>Settings</h3>
+          </div>
+          <div class="account"></div>
+          <div class="setting_option">
+            <div class="btn">
+              <div class="container" id="s_container1" onclick="togglefunction1()">
+                <div class="button" id="s_button1"></div>
+              </div>
+            </div>
+            <p>Email me when someone follows me</p>
+          </div>
+          <div class="setting_option">
+            <div class="btn">
+              <div class="container" id="s_container2" onclick="togglefunction2()">
+                <div class="button" id="s_button2"></div>
+              </div>
+            </div>
+            <p>Email me when someone comments on my post</p>
+          </div>
+          <div class="setting_option">
+            <div class="btn">
+              <div class="container" id="s_container3" onclick="togglefunction3()">
+                <div class="button" id="s_button3"></div>
+              </div>
+            </div>
+            <p>Email me when someone mentions me</p>
+          </div>
+          <div class="setting_option">
+            <div class="btn">
+              <div class="container" id="s_container4" onclick="togglefunction4()">
+                <div class="button" id="s_button4"></div>
+              </div>
+            </div>
+            <p>Set account privacy to Private</p>
+          </div>
+          <div class="setting_option">
+            <div class="btn">
+              <div class="container" id="s_container5" onclick="togglefunction5()">
+                <div class="button" id="s_button5"></div>
+              </div>
+            </div>
+            <p>Enable dark mode for better visibility </p>
+          </div>
+        </div>
+        <div class="box box2" id="profile_id">
+          <div class="profile">
+            <img src="pngaaa.com-2127823.png" alt="">
+            <h4>Profile Information</h4>
+          </div>
+          <div class="info">
+            <p>Hello! I'm Humayun Ahmad, thrilled to embark on a journey of learning and discovery together !</p>
+          </div>
+          <div class="line"></div>
+          <div class="in1">
+            <span>Full Name :&nbsp</span>
+            <span style="color:white">Humayun Ahmad</span>
+          </div>
+          <div class="in1">
+            <span>Mobile :&nbsp</span>
+            <span style="color:white">91-8252598722</span>
+          </div>
+          <div class="in1">
+            <span>Email :&nbsp</span>
+            <span style="color:white">humayuna23@iitk.ac.in</span>
+          </div>
+          <div class="in1">
+            <span>Location :&nbsp</span>
+            <span style="color:white">India</span>
+          </div>
+        </div>
+        <div class="box box3" id="message_id">
+          <div class="title">
+            <img src="pngaaa.com-1343787.png" alt="">
+            <h4>Messages</h4>
+          </div>
+          <div class="message">
+            <div class="m1">
+              <img src="pexels-stefanstefancik-91227.jpg" alt="" class="profile">
+              <div class="text">
+                <p style="margin:0;font-weight:600">Daniel </p>
+                <p style="margin:0">Can you provide me...</p>
+              </div>
+            </div>
+            <div class="reply">Reply</div>
+          </div>
+          <div class="message">
+            <div class="m1">
+              <img src="pexels-stefan-stefancik-91224.jpg" alt="" class="profile">
+              <div class="text">
+                <p style="margin:0;font-weight:600">Alexander Smith</p>
+                <p style="margin:0">See you soon</p>
+              </div>
+            </div>
+            <div class="reply">Reply</div>
+          </div>
+          <div class="message">
+            <div class="m1">
+              <img src="pexels-olly-774909 (1).jpg" alt="" class="profile">
+              <div class="text">
+                <p style="margin:0;font-weight:600">Sophia Williams</p>
+                <p style="margin:0">Yeah, it was fun</p>
+              </div>
+            </div>
+            <div class="reply">Reply</div>
+          </div>
+          <div class="message">
+            <div class="m1">
+              <img src="pexels-olly-733872.jpg" alt="" class="profile">
+              <div class="text">
+                <p style="margin:0;font-weight:600">Emily Johnson</p>
+                <p style="margin:0">Meeting at noon</p>
+              </div>
+            </div>
+            <div class="reply">Reply</div>
+          </div>
+        </div>
+      </div>
+      <div class="sub_container3">
+        <div class="project">
+          <img src="clipart1342575.png" alt="">
+          <h3>Projects</h3>
+        </div>
+        <div class="projects">
+          <div class="box">
+            <div class="_top">
+              <div class="img">
+                <img src="vecteezy_3d-purple-illustration-icon-of-statistic-or-infographic_29726203.png"
+                  style="width:54px;height:54px" alt="">
+              </div>
+              <div class="_title">
+                <p style="font-size:20px;font-weight:500;color:white;margin-bottom:4px">UX Design</p>
+                <p>Project #1</p>
+              </div>
+            </div>
+            <div class="body">
+              <p style="font-size:16px; margin-bottom:0">Weather Dashboard :</p>
+              <p style="margin-top:8px">Display weather forecast with interactive UI elements.</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="_top">
+              <div class="img">
+                <img src="vecteezy_3d-purple-illustration-icon-of-statistic-or-infographic_29726203.png"
+                  style="width:54px;height:54px" alt="">
+              </div>
+              <div class="_title">
+                <p style="font-size:20px;font-weight:500;color:white;margin-bottom:4px">UX Design</p>
+                <p>Project #2</p>
+              </div>
+            </div>
+            <div class="body">
+              <p style="font-size:16px; margin-bottom:0">Fitness Tracker :</p>
+              <p style="margin-top:8px">Track workouts, set goals, and monitor progress visually</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="_top">
+              <div class="img">
+                <img src="web-development.png" alt="">
+              </div>
+              <div class="_title">
+                <p style="font-size:20px;font-weight:500;color:white;margin-bottom:4px">Development</p>
+                <p>Project #3</p>
+              </div>
+            </div>
+            <div class="body">
+              <p style="font-size:16px; margin-bottom:0">Portfolio Website :</p>
+              <p style="margin-top:8px">Design a website to showcase your work, skills, and achievements..</p>
+            </div>
+          </div>
+          <div class="box box4">
+            <div>
+              <p style="font-size:40px;font-weight:500">+</p>
+            </div>
+            <p>Create a new project</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let btn1 = document.getElementById("button");
+    btn1.addEventListener('click', () => {
+      alert("BUTTON WAS CLICKED");
+    })
+  </script>
+  <script>
+    let icon = document.getElementById("icon1");
+    let noti = document.getElementById("notification");
+    icon.addEventListener('click', () => {
+      icon.classList.add("active");
+      setTimeout(() => {
+        icon.classList.remove("active");
+      }, 150)
+      noti.classList.toggle("active");
+    })
+  </script>
+  <script>
+    function togglefunction1() {
+      var button_1 = document.getElementById("s_button1");
+      button_1.classList.toggle("active");
+      var container_1 = document.getElementById("s_container1");
+      container_1.classList.toggle("active");
+      button_1.blur();
+      container_1.blur();
+    }
+    function togglefunction2() {
+      var button_2 = document.getElementById("s_button2");
+      button_2.classList.toggle("active");
+      var container_2 = document.getElementById("s_container2");
+      container_2.classList.toggle("active");
+      button_2.blur();
+      container_2.blur();
+    }
+    function togglefunction3() {
+      var button_3 = document.getElementById("s_button3");
+      button_3.classList.toggle("active");
+      var container_3 = document.getElementById("s_container3");
+      container_3.classList.toggle("active");
+      button_3.blur();
+      container_3.blur();
+    }
+    function togglefunction4() {
+      var button_4 = document.getElementById("s_button4");
+      button_4.classList.toggle("active");
+      var container_4 = document.getElementById("s_container4");
+      container_4.classList.toggle("active");
+      button_4.blur();
+      container_4.blur();
+    }
+    function togglefunction5() {
+      var button_5 = document.getElementById("s_button5");
+      button_5.classList.toggle("active");
+      var container_5 = document.getElementById("s_container5");
+      container_5.classList.toggle("active");
+      button_5.blur();
+      container_5.blur();
+    }
+  </script>
+  <script>
+    let overview_btn = document.getElementById("overview");
+    let overview_box = document.getElementById("overview_box");
+    overview_btn.addEventListener('click', () => {
+      window.open('https://blog.sap-press.com/sap-fiori-overview-pages-features-and-personalization');
+    })
+
+  </script>
+  <script>
+    let profile = document.getElementById("profile_id");
+    let profile_a = document.getElementById("a_profile");
+    profile_a.addEventListener('click', () => {
+      profile.classList.toggle("active");
+    })
+    let setting = document.getElementById("setting_id");
+    let setting_a = document.getElementById("a_setting");
+    setting_a.addEventListener('click', () => {
+      setting.classList.toggle("active");
+    })
+    let message = document.getElementById("message_id");
+    let message_a = document.getElementById("a_message");
+    message_a.addEventListener('click', () => {
+      message.classList.toggle("active");
+    })
+  </script>
+</body>
+
+</html>
